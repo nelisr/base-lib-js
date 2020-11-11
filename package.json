@@ -1,0 +1,48 @@
+{
+  "name": "modulo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "test:watch": "./node_modules/.bin/mocha tests/fizzbuzz.spec.js --bail --require babel-register --watch",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --require babel-register",
+    "test:coverage": "nyc yarn test:tdd"
+  },
+  "nyc": {
+    "lines": 80,
+    "functions": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": "tests/**"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint -- yarn test:tdd -- test:coverage"
+    }
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "libary"
+  ],
+  "author": "Nelis Rodrigues <nelis.rodriguess@gmail.com> (http://nelisrodrigues.com.br/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2"
+  }
+}
