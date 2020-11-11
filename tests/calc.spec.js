@@ -1,8 +1,11 @@
 import { expect } from 'chai';
-import { sum, sub, mult, div } from '../src/calc';
+import Calc, { sum, sub, mult, div } from '../src/calc';
 
 describe('Calc', () => {
   describe('Smoke Tests', () => {
+    it(`should exists the lib Calc`, () => {
+      expect(Calc).to.exist;
+    });
     it('should exists the method `sum`', () => {
       expect(sum).to.exist;
     });
