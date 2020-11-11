@@ -1,10 +1,10 @@
-# Project Title
+# Base Lib JS
 
 One Paragraph of project description goes here
 
 ## Description
 
-Essse projeto usa para tests Mocha, Chai e Sinon. Usa Nyc/Stambull para coverage
+This is a basic project that uses mocha with chai for testing and nyc for coverage
 
 ## Getting Started
 
@@ -76,7 +76,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Nelis Rodrigues** - _Initial work_ - [PurpleBooth](https://github.com/nelisr)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
